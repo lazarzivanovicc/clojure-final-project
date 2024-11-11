@@ -1,0 +1,223 @@
+; This is the Calva REPL Window.
+; It's just a file, really, with some special treatment from Calva.
+; Use it as a REPL input prompt if you like. (When the REPL is connected.)
+; TIPS: The keyboard shortcut `ctrl+alt+o r` shows and focuses this window
+; Please see https://calva.io/repl-window/ for more info.
+; Happy coding! ♥️
+
+; TIPS: As with any Clojure file when the REPL is connected:
+; - `alt+enter` evaluates the current top level form.
+; - `ctrl+enter` evaluates the current form.
+; Special for this file:
+; - `alt+up` and `alt+down` traverse up and down the REPL command history
+;    when the cursor is after the last contents at the prompt
+; 
+; See also the Calva Inspector: https://calva.io/inspector/
+
+PLEASE NOTE
+We will update the default location of this file.
+The new default location will be
+  "<projectRootPath>/.calva/repl.calva-repl"
+For now the legacy path is used by default.
+To give yourself a smooth transition, you can opt in
+to the change, by configuring this setting as false:
+  "calva.useLegacyReplWindowPath"
+and then add "**/.calva/repl.calva-repl" to your ".gitignore" file.
+
+
+This file is configured as the output destination for all REPL output.
+You can configure this with the setting:
+  "calva.outputDestinations"
+
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: pushd c:\Users\Lazar\Desktop\clojure-final-project & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.1.1"] -- update-in :plugins conj [cider/cider-nrepl,"0.47.1"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- repl :headless & popd
+; Using host:port 127.0.0.1:54608 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉clojure-final-project.core꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉clojure-final-project.core꞉> 
+; Jack-in done.
+clj꞉clojure-final-project.core꞉> 
+; Syntax error compiling at (c:\Users\Lazar\Desktop\clojure-final-project\src\clojure_final_project\core.clj:9:20).
+; No such namespace: io
+clj꞉clojure-final-project.core꞉> 
+; Syntax error compiling at (c:\Users\Lazar\Desktop\clojure-final-project\src\clojure_final_project\core.clj:10:22).
+; No such namespace: io
+clj꞉clojure-final-project.core꞉> 
+nil
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/read-csv
+clj꞉clojure-final-project.core꞉> 
+; Execution error (FileNotFoundException) at java.io.FileInputStream/open0 (FileInputStream.java:-2).
+; in-file.csv (The system cannot find the file specified)
+clj꞉clojure-final-project.core꞉> 
+; Syntax error reading source at (REPL:13:28).
+; Unsupported escape character: \c
+clj꞉clojure-final-project.core꞉> 
+; Syntax error reading source at (REPL:13:25).
+; Unsupported escape character: \s
+clj꞉clojure-final-project.core꞉> 
+; Execution error (FileNotFoundException) at java.io.FileInputStream/open0 (FileInputStream.java:-2).
+; .\in-file.csv (The system cannot find the file specified)
+clj꞉clojure-final-project.core꞉> 
+; Execution error (FileNotFoundException) at java.io.FileInputStream/open0 (FileInputStream.java:-2).
+; .\in-file.csv (The system cannot find the file specified)
+clj꞉clojure-final-project.core꞉> 
+; c:\Users\Lazar\Desktop\clojure-final-project
+nil
+clj꞉clojure-final-project.core꞉> 
+(["foo" "bar" "baz"] ["A" "1" "x"] ["B" "2" "y"] ["C" "3" "z"])
+clj꞉clojure-final-project.core꞉> 
+; Syntax error compiling at (c:\Users\Lazar\Desktop\clojure-final-project\src\clojure_final_project\core.clj:20:12).
+; Unable to resolve symbol: csv-data->maps in this context
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/csv-data->maps
+clj꞉clojure-final-project.core꞉> 
+({:foo "A", :bar "1", :baz "x"} {:foo "B", :bar "2", :baz "y"} {:foo "C", :bar "3", :baz "z"})
+clj꞉clojure-final-project.core꞉> 
+nil
+clj꞉clojure-final-project.core꞉> 
+nil
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/read-csv
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/csv-data->maps
+clj꞉clojure-final-project.core꞉> 
+({:foo "A", :bar "1", :baz "x"} {:foo "B", :bar "2", :baz "y"} {:foo "C", :bar "3", :baz "z"})
+clj꞉clojure-final-project.core꞉> 
+; Execution error (ClassCastException) at clojure-final-project.core/eval64680 (form-init9584098703976369802.clj:21).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉clojure-final-project.core꞉> 
+(["foo" "bar" "baz"] ["A" "1" "x"] ["B" "2" "y"] ["C" "3" "z"])
+clj꞉clojure-final-project.core꞉> 
+; Syntax error macroexpanding clojure.core/defn at (c:\Users\Lazar\Desktop\clojure-final-project\src\clojure_final_project\core.clj:8:1).
+; foo - failed: vector? at: [:fn-tail :arity-1 :params] spec: :clojure.core.specs.alpha/param-list
+; foo - failed: (or (nil? %) (sequential? %)) at: [:fn-tail :arity-n :bodies] spec: :clojure.core.specs.alpha/params+body
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/read-csv
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/read-csv
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/read-csv
+clj꞉clojure-final-project.core꞉> 
+(["foo" "bar" "baz"] ["A" "1" "x"] ["B" "2" "y"] ["C" "3" "z"] ["NaN" "2" "z"])
+clj꞉clojure-final-project.core꞉> 
+(["foo" "bar" "baz"] ["A" "1" "x"] ["B" "2" "y"] ["C" "3" "z"] ["" "2" "z"])
+clj꞉clojure-final-project.core꞉> 
+true
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/split-train-test-validation
+clj꞉clojure-final-project.core꞉> 
+({:foo "A", :bar "1", :baz "x"} {:foo "B", :bar "2", :baz "y"} {:foo "C", :bar "3", :baz "z"})
+clj꞉clojure-final-project.core꞉> 
+; Make sure percentages add up to 1
+; Execution error (NullPointerException) at clojure-final-project.core/split-train-test-validation (form-init9584098703976369802.clj:32).
+; Cannot invoke "clojure.lang.IFn.invoke()"
+clj꞉clojure-final-project.core꞉> 
+; Make sure percentages add up to 1
+; Execution error (NullPointerException) at clojure-final-project.core/split-train-test-validation (form-init9584098703976369802.clj:32).
+; Cannot invoke "clojure.lang.IFn.invoke()"
+clj꞉clojure-final-project.core꞉> 
+; Make sure percentages add up to 1
+; Execution error (NullPointerException) at clojure-final-project.core/split-train-test-validation (form-init9584098703976369802.clj:32).
+; Cannot invoke "clojure.lang.IFn.invoke()"
+clj꞉clojure-final-project.core꞉> 
+; Make sure percentages add up to 1
+; Execution error (NullPointerException) at clojure-final-project.core/split-train-test-validation (form-init9584098703976369802.clj:32).
+; Cannot invoke "clojure.lang.IFn.invoke()"
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/split-train-test-validation
+clj꞉clojure-final-project.core꞉> 
+; Execution error (ClassCastException) at clojure-final-project.core/split-train-test-validation (form-init9584098703976369802.clj:34).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉clojure-final-project.core꞉> 
+; Syntax error reading source at (REPL:51:107).
+; Unmatched delimiter: ]
+clj꞉clojure-final-project.core꞉> 
+; Execution error (ClassCastException) at clojure-final-project.core/split-train-test-validation (form-init9584098703976369802.clj:34).
+; class java.lang.Boolean cannot be cast to class clojure.lang.IFn (java.lang.Boolean is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/split-train-test-validation
+clj꞉clojure-final-project.core꞉> 
+; Make sure percentages add up to 1
+nil
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/split-train-test-validation
+clj꞉clojure-final-project.core꞉> 
+{:train
+ ({:foo "C", :bar "3", :baz "z"}
+  {:foo "B", :bar "2", :baz "y"}
+  {:foo "C", :bar "3", :baz "z"}
+  {:foo "B", :bar "2", :baz "y"}),
+ :test ({:foo "C", :bar "3", :baz "z"} {:foo "A", :bar "1", :baz "x"} {:foo "A", :bar "1", :baz "x"}),
+ :validation ({:foo "A", :bar "1", :baz "x"} {:foo "B", :bar "2", :baz "y"} {:foo "A", :bar "1", :baz "x"})}
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/split-train-test-validation
+clj꞉clojure-final-project.core꞉> 
+{:train
+ ({:foo "A", :bar "1", :baz "x"}
+  {:foo "C", :bar "3", :baz "z"}
+  {:foo "B", :bar "2", :baz "y"}
+  {:foo "A", :bar "1", :baz "x"}),
+ :test ({:foo "A", :bar "1", :baz "x"} {:foo "A", :bar "1", :baz "x"} {:foo "C", :bar "3", :baz "z"}),
+ :validation ({:foo "C", :bar "3", :baz "z"} {:foo "B", :bar "2", :baz "y"} {:foo "B", :bar "2", :baz "y"})}
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/split-train-test-validation
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/read-csv
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/read-csv
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/read-csv
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/read-csv
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/read-csv
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/csv-data->maps
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/csv-data->maps
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/read-csv
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/split-train-test-validation
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/csv-data->maps
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/csv-data->maps
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/csv-data->maps
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/csv-data->maps
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/read-csv
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/read-csv
+clj꞉clojure-final-project.core꞉> 
+#'clojure-final-project.core/foo
+clj꞉clojure-final-project.core꞉> 
+; Execution error (ClassCastException) at clojure-final-project.core/eval64762 (form-init9584098703976369802.clj:77).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+clj꞉clojure-final-project.core꞉> 
+(["foo" "bar" "baz"]
+ ["A" "1" "x"]
+ ["B" "2" "y"]
+ ["C" "3" "z"]
+ ["A" "1" "x"]
+ ["B" "2" "y"]
+ ["C" "3" "z"]
+ ["A" "1" "x"]
+ ["B" "2" "y"]
+ ["C" "3" "z"]
+ ["A" "1" "x"])
+clj꞉clojure-final-project.core꞉> 
